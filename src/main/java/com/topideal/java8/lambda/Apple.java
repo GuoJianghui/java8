@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.topideal.java8.lambda;
 
@@ -14,14 +14,14 @@ public class Apple implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String color;
-	
+
 	private float weight;
 
 	public Apple(String color, float weight) {
 		this.color = color;
 		this.weight = weight;
 	}
-	
+
 	/**
 	 * @return the color
 	 */
@@ -49,9 +49,17 @@ public class Apple implements Serializable {
 	public void setWeight(float weight) {
 		this.weight = weight;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "apple[weight: " + this.getWeight() + ", color: " + this.getColor() + "]";
+		return "apple{weight=" + this.getWeight() + ", color=" + this.getColor() + "}";
+	}
+
+	public static boolean isHeavyApple(Apple apple) {
+		return apple.getWeight() > 100;
+	}
+
+	static boolean isBlackApple(Apple apple) {
+		return "black".equals(apple.getColor());
 	}
 }
