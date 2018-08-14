@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 /**
  * @author ripdent
@@ -29,7 +30,8 @@ public class FilteringApples {
 		System.out.println(filterApple(inventory, Apple::isBlackApple));
 		System.out.println(filterApple(inventory, (Apple a) -> a.getColor().equals("black")));
 		System.out.println(filterApple(inventory, a -> a.getWeight() > 100));
-
+		
+		System.out.println(inventory);
 	}
 
 	static List<Apple> filterBlackApple(List<Apple> inventory) {
